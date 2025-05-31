@@ -1,1 +1,4 @@
 .env
+
+#directory must end with /
+node_modules/ 
