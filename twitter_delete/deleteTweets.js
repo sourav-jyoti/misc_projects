@@ -1,3 +1,5 @@
+//b.js is written using twitter new api v2 version 
+
 const OAuth = require('oauth-1.0a');
 const crypto = require('crypto');
 const fetch = require('node-fetch'); // Using node-fetch@2 for CommonJS

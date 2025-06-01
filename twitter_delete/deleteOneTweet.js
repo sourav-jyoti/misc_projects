@@ -1,46 +1,48 @@
-//code to delete a single tweet with id
+ //code to delete a single tweet with hard coded id using twitter version 2 api v2
 
-const OAuth = require('oauth-1.0a');
-const crypto = require('crypto');
-const fetch = require('node-fetch').default; // Import node-fetch correctly
 require('dotenv').config();
+const { TwitterApi } = require('twitter-api-v2');
 
-// OAuth 1.0a credentials
-const oauth = OAuth({
-  consumer: {
-    key: process.env.TWITTER_API_KEY,
-    secret: process.env.TWITTER_API_SECRET
-  },
-  signature_method: 'HMAC-SHA1',
-  hash_function(base_string, key) {
-    return crypto.createHmac('sha1', key).update(base_string).digest('base64');
+const client = new TwitterApi({
+  appKey: process.env.TWITTER_API_KEY,
+  appSecret: process.env.TWITTER_API_SECRET,
+  accessToken: process.env.TWITTER_ACCESS_TOKEN,
+  accessSecret: process.env.TWITTER_ACCESS_SECRET,
+})
+
+const rwClient = client.readWrite;
+
+async function deleteTweet(tweetId) {
+  console.log(tweetId);
+  try {
+    const response = await rwClient.v2.deleteTweet(tweetId);
+    if (response.data && response.data.deleted) {
+      console.log(`Successfully deleted tweet ${tweetId}`);
+      return true;
+    } else {
+      console.error(`Failed to delete tweet ${tweetId}:`, response.data);
+      return false;
+    }
+  } catch (err) {
+    console.error(`Error deleting tweet ${tweetId}:`, err);
+    return false;
   }
-});
+}
 
-// Token for the user (access token and secret)
-const token = {
-  key: process.env.TWITTER_ACCESS_TOKEN,
-  secret: process.env.TWITTER_ACCESS_SECRET
-};
-
-// Request details
-const request_data = {
-  url: 'https://api.twitter.com/2/tweets/1902758022776017274',
-  method: 'DELETE'
-};
-
-// Generate OAuth headers
-const authorization = oauth.authorize(request_data, token);
-
-// Make the request
-const options = {
-  method: request_data.method,
-  headers: {
-    Authorization: oauth.toHeader(authorization).Authorization
+async function deleteRecentTweets() {
+  const userId = process.env.TWITTER_USER_ID; // Add TWITTER_USER_ID to .env
+  if (!userId) {
+    console.error('TWITTER_USER_ID not set in .env');
+    return;
   }
-};
 
-fetch(request_data.url, options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
+  const tweetId = '1929241633771401695';
+  console.log(`Deleting tweet `);
+  await deleteTweet(tweetId);
+
+  console.log('Finished deleting tweets.');
+}
+
+// Run the script
+deleteRecentTweets().catch(err => console.error('Script error:', err)); 
+
