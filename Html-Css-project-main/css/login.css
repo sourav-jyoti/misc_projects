@@ -1,0 +1,69 @@
+body{
+    background-image: url("data:image/jpeg;base64,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");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    margin: 10px 500px;
+    background-color: white;
+}
+.heading{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 50px;
+    
+
+
+
+}
+.main{
+    margin: 80PX 80PX;
+}
+.labelname,.labelpassword{
+    display: block;
+    font-size: 25px;
+    
+    margin-bottom: 10px;
+}
+.forget{
+    
+    font-size: 13px;
+    float: right;
+    padding-top: 5px;
+}
+.username,.password,.login{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}   
+#inputname,#inputpassword{
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+.signup{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+.login{
+    text-align: center;
+    
+}
+.loginbutton{
+    width: 100%;
+    height: 40px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    font-size: 20px;
+    background-color: forestgreen;
+    color: white;
+    border-radius: 20px;
+}
+.loginbutton:hover{
+    background-color: grey;
+}
+/* https://img.freepik.com/free-vector/gradient-monoc…2b96420075a6c9cedda9ce61635a68da458395895a9926df2 */

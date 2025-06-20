@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Generator</title>
+    <link rel="stylesheet" href="./css/ticket.css">
+</head>
+<body>
+    <div class = "content">
+        <div class="banner">
+            <div class="container">
+                <a href="./index.html" class="logo">
+                    <img src="./asests/logo_1.png" width="50px" height="60px" border-radius="10px">
+                </a>
+            </div>
+        </div>
+
+    <br>
+    <br>
+        <div>
+            <form id="ticketForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="registrationNo">Registration No.:</label>
+            <input type="text" id="registrationNo" name="registrationNo" required>
+
+            <button type="button" onclick="generateTicket()">Generate Ticket</button>
+            <button type="button" onclick="paynow()">Paynow</button>
+            </form>
+        </div>
+
+    <div id="ticketContainer"></div>
+</div>
+    <footer>
+        <div class="container">
+            <ul class="flex">
+                <li><a href="./about.html" class="footer">About us</a></li>
+                <li><a href="./contactus.html" class="footer">Contact us</a></li>
+                <li><a href="/login.html" class="footer">login</a></li>
+                
+            </ul>
+        </div>
+    </footer>
+
+    <script src="./JS/ticket.js"></script> 
+</body>
+</html>
+
+

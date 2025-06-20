@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <script>
+        function login() {
+
+            // After successful login, show an alert
+            alert("Login successful!");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="top">
+            <div class="heading">Login</div>
+
+        </header>
+        <main class="main">
+            <div class="username">
+                <label for="inputname" class="labelname">Username</label>
+                <input type="text" id="inputname" placeholder="Enter your username..">
+
+            </div>
+            <div class="password">
+                <label for="inputpassword" class="labelpassword">Password</label>
+                <input type="password" id="inputpassword" placeholder="Enter your password.."><br>
+                <a href="#" class="forget">forget password?</a>
+
+
+          
+            </div>
+            <div class="login">
+                
+                <input type="button" value="login" class="loginbutton" onclick="login()">
+            
+            </div>
+            <div class="signup">
+                <a href ="/index.html" >
+                <span>Home Page</span><br>
+                </a>
+            </div>
+        </main>
+
+    </div>
+    
+</body>
+</html>

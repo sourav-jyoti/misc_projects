@@ -1,0 +1,75 @@
+.container{
+    margin:10px 500px;
+    border: 2px solid blanchedalmond;
+    background-color:#fcfcfc;
+    
+}
+.top{
+    background-color: forestgreen;
+    text-align: left;
+    padding-left: 25px;
+    padding-top: 15px;
+    color: white;
+    border-radius: 2px;
+    border: 2px solid forestgreen;
+    height:100px;
+
+}
+.contact{
+    font-size: 53px;
+}
+.normal{
+    font-size: 18px;
+
+}
+.main{
+    margin: 20px;
+
+}
+.labelname,.labelemail,.yourquery,.labelsubject{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+#inputname,#inputemail,#yourquery,#selectsubject{
+    width: 98%;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid blanchedalmond;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: light;
+
+}
+
+.subject,.email,.name,.query{
+    margin-top: 10px;
+}
+#selectsubject{
+    width: 100%;
+}
+.submit,.reset{
+    margin-top: 10px;
+    
+    
+    
+}
+.submitbutton,.resetbutton{
+    background-color: forestgreen;
+    height: 30px;
+    color: white;
+    border-color: forestgreen;
+    border-radius: 4px;
+    
+    margin-left: 5px;
+}
+.submitbutton:hover,.resetbutton:hover{
+    background-color: grey;
+}
+#yourquery{
+    resize: none;
+    height: 180px;
+}

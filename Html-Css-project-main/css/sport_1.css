@@ -1,0 +1,106 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+    font-family: 'Oswald', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+.description{
+    font-size: 25px;
+    margin: 34px;
+    padding: 0px 70px;
+    font-family: system-ui, -apple-system, Ubuntu,BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.T20{
+    display: flex;
+    justify-content: center;
+}
+.match{
+    margin: 34px;
+    padding: 0px 70px;
+}
+.Time{
+    margin: 34px;
+    padding:0px 70px;
+}
+.Venue{
+    margin: 34px;
+    padding: 0px 70px;
+}
+.About{
+    margin: 34px;
+    padding: 0px 70px;
+}
+img{
+    border-radius: 10%;
+}
+.book{
+    position: absolute;
+        right: 70px;
+        top: 700px;
+        bottom: 70px;
+        display: inline-block;
+        border: 2px solid white;
+        border-radius: 10px;
+        background-color: red;
+        color: white;
+        text-decoration: none;
+}
+.book a{
+    color: white;
+    text-decoration: none;
+}
+.book a:hover{
+    color:blue;
+}    
+
+
+.banner{
+    position: relative;
+    display: inline-block;
+    width: 100%; /* set your desired width */
+    height: 70px; /* set your desired height */
+    text-align: center;
+    background-color: #0e1e42;
+}
+
+footer{
+    background-color:#0e1e42;
+    height:70px;
+    padding-top:20px;  
+}
+
+.container{
+    max-width:1180px;
+    margin-inline:auto;
+    padding-inline:20px;
+}
+
+.flex{
+    display:flex;
+    align-items:center;
+    gap:40px;
+
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    color:white;
+}
+.footer:hover{
+    color:aqua;
+    transition: 0.2s ease-out;
+    
+}
