@@ -18,7 +18,7 @@ async function deleteTweet(tweetId) {
     const response = await rwClient.v2.deleteTweet(tweetId);
     if (response.data && response.data.deleted) {
 
-      console.log(`Successfully deleted tweet ${tweetId}`);
+      console.log(`Successfully deleted tweet ${tweetId} Yo`);
       
       return true;
     } else {
